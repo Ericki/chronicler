@@ -1,0 +1,66 @@
+
+
+
+<div class="container">
+
+<div class="row">
+    <div class="col-md-5">
+      <button *ngIf="id" (click)= "deleteBook()">Eliminar</button>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+       
+        
+        <h2 *ngIf="!id">Crear nuevo libro</h2>
+        <h2 *ngIf="id">Editar libro</h2>
+        <input type="hidden" formControlName="key">
+        <div class="form-group">
+          <label>title</label>
+          <input formControlName="title" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.title.errors}">
+          <div class="invalid-feedback" *ngIf="submitted && formControls.title.errors">
+            This field is required.</div>
+        </div>
+       
+        <div class="form-group">
+          <label>author</label>
+          <input formControlName="author" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.author.errors}">
+          <div class="invalid-feedback" *ngIf="submitted && formControls.author.errors">
+            This field is required.</div>
+        </div>
+        <div class="form-group">
+          <label>publishingHouse</label>
+          <input formControlName="publishingHouse" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.publishingHouse.errors}">
+          <div class="invalid-feedback" *ngIf="submitted && formControls.publishingHouse.errors">
+            This field is required.</div>
+        </div>
+        <div class="form-group">
+          <label>publicationDate</label>
+          <input formControlName="publicationDate" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.publicationDate.errors}">
+          <div class="invalid-feedback" *ngIf="submitted && formControls.publicationDate.errors">
+            This field is required.</div>
+        </div>
+        <div class="form-group">
+          <label>coverPage</label>
+          <input formControlName="coverPage" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.coverPage.errors}">
+          <div class="invalid-feedback" *ngIf="submitted && formControls.coverPage.errors">
+            This field is required.</div>
+        </div>
+        <div class="form-group">
+          <label>synopsis</label>
+          <input formControlName="synopsis" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.synopsis.errors}">
+          <div class="invalid-feedback" *ngIf="submitted && formControls.synopsis.errors">
+            This field is required.</div>
+        </div>
+        
+        <div class="form-group">
+          <input type="submit" class="btn btn-primary" value="Guardar">
+        </div>
+      </form>
+      <div class="alert alert-info"  *ngIf="showSuccessMessage">
+        Submitted successfully.
+      </div>
+    </div>
+    <div class="col-md-7">
+      
+    </div>
+  </div>
+ 
+</div>

@@ -1,0 +1,67 @@
+App:name Croniclers V1.0.0              Path    
+    /admin
+        /components
+            /adminHome                  admin/home
+            /admin-manage-user          admin/users
+        /services
+            /AdminAuthGuard.service.ts
+    /chronicler
+        /components
+            /chronicler-books           chronicler/books   
+            /chronicler-book-form       chronicler/books:new,chronicler/books:id
+            /chronicler-gallery         chronicler/gallery
+            /chronicler-image           chronicler/image:new,chronicler/image:id
+            /chronicler-communitys      chronicler/communitys
+            /chronicler-community-form  chronicler/community:new,chronicler/community:id
+            /chronicler-manage-user     chronicler/users
+            /chronicler-user-form       chronicler/user:new,chronicler/user:new
+            /setting                    chronicler.setting
+            /upload-image
+            /upload-book
+            /upload-file
+        /services
+            /ChroniclerAuthGuard.service.ts
+    /user
+        /components
+            /books                      books
+            /gallery                    gallery
+            /community                  community 
+            /municipality               municipality                 
+            /services
+                /                   
+    /core
+        /navBar
+        /home                        
+        /login                          login
+        /register                       register
+    /shared
+        /components
+            /carousel
+            /bookList
+            /imageList
+            /communityList
+            /municipalityList
+            /country
+            /DetailsUpload
+        /services
+            /AuthGuard.service.ts
+            /Auth.service.ts
+            /book.service.ts
+            /image.service.ts
+            /community.service.ts
+            /municipality.service.ts
+            /crudData.service.ts
+        /models
+            /country.ts
+            /community.ts
+            /book.ts
+            /image.ts
+            /file
+            /user.ts
+            
+    /paths
+        /pathApp.ts
+    /language  
+        /chooseLenguaje.ts
+        /english.ts
+        /spanish.ts  

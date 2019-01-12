@@ -1,0 +1,14 @@
+<p>
+  community-list works!
+</p>
+<button (click)="createCommunity()"> con</button>
+<ul>
+    <li *ngFor="let community of communitys$ | async">
+      <div>{{ community | json }}</div>
+      <div>
+        <button 
+        (click)="updateCommunity(community.key,{d:'update'})"> Update</button>
+        <button (click)="deleteCommunity(community.key)"> Delete</button>
+      </div> 
+    </li>
+  </ul>

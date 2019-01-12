@@ -1,0 +1,13 @@
+<p>
+  municipality-list works!
+</p>
+<button (click)="createMunicipality()"> con</button>
+<ul>
+    <li *ngFor="let municipality of municipalitys$ | async">
+      <div>{{ municipality | json }}</div>
+      <div>
+        <button (click)="updateMunicipality(municipality.id,{d:'update'})"> Update</button>
+        <button (click)="deleteMunicipality(municipality.id)"> Delete</button>
+      </div> 
+    </li>
+  </ul>

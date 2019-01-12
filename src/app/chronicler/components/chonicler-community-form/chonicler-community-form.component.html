@@ -1,0 +1,90 @@
+<div class="row">
+  <div class="col-md-5">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      {{form.value | json}}
+      <input type="hidden" formControlName="key">
+
+      <div class="form-group">
+        <label>name</label>
+        <input formControlName="name" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.name.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.name.errors">
+          This field is required.</div>
+      </div>
+     
+      <div class="form-group">
+        <label>description</label>
+        <input formControlName="description" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.description.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.description.errors">
+          This field is required.</div>
+      </div>
+      <div class="form-group">
+        <label>foundation</label>
+        <input formControlName="foundation" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.foundation.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.foundation.errors">
+          This field is required.</div>
+      </div>
+        
+      <div class="form-group">
+        <label>founders</label>
+        <input formControlName="founders" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.founders.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.founders.errors">
+          This field is required.</div>
+      </div>
+    
+      <div class="form-group">
+        <label>category</label>
+        <input formControlName="category" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.category.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.category.errors">
+          This field is required.</div>
+      </div>
+    
+      <div class="form-group">
+        <label>etymology</label>
+        <input formControlName="etymology" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.etymology.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.etymology.errors">
+          This field is required.</div>
+      </div>
+      <div class="form-group">
+        <label>heraldry</label>
+        <input formControlName="heraldry" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.heraldry.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.heraldry.errors">
+          This field is required.</div>
+      </div>
+    
+      <div class="form-group">
+        <label>numberCommunities</label>
+        <input formControlName="numberCommunities" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.numberCommunities.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.numberCommunities.errors">
+          This field is required.</div>
+      </div>
+        
+      <div class="form-group">
+        <label>year</label>
+        <input formControlName="year" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.year.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.year.errors">
+          This field is required.</div>
+      </div>
+      
+      <div class="form-group">
+        <label>women</label>
+        <input formControlName="women" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.women.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.women.errors">
+          This field is required.</div>
+      </div>
+      
+      <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Submit">
+      </div>
+    </form>
+    <div class="alert alert-info"  *ngIf="showSuccessMessage">
+      Submitted successfully.
+    </div>
+  </div>
+  <div class="col-md-7">
+    
+  </div>
+</div>
+
+         
+  
+  
